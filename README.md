@@ -1,8 +1,13 @@
 # Pong - mini game
 
-A mini game developed in Flutter and Dart
+A mini game developed in Flutter and Dart.
+The game has animations, score counter, start screen, hints, pause screen, gestures, etc.
 
-I also added apk if you only want to try the App!!!
+Secret: You cannot beat the enemy! it's coded like that!🤫🤭
+
+It's actually based on a pong game project developed by Mitch Koko on which he provided a tutorial on his youtube channel. I have took this project futher ahead by adding more components like start,hint, pause screen, etc.
+Special Credits: Link to his project tutorial on Youtube👇
+https://www.youtube.com/watch?v=ScxmOdY0MoE
 
 - 👋 Hi, I’m Mithilesh Ghadge
 - Passionate Coder from India

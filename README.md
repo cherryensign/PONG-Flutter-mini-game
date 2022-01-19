@@ -1,4 +1,4 @@
-# ponggame
+# Pong - mini game
 
 A new Flutter project.
 

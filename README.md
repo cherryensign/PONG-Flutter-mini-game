@@ -1,6 +1,13 @@
 # Pong - mini game
 
-A new Flutter project.
+A mini game developed in Flutter and Dart
+
+I also added apk if you only want to try the App!!!
+
+- 👋 Hi, I’m Mithilesh Ghadge
+- Passionate Coder from India
+- Instagram : https://www.instagram.com/mithileshghadge/
+- Facebook : https://www.facebook.com/mitilesh.ghadge
 
 ## Getting Started
 

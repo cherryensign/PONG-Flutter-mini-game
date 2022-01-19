@@ -2,7 +2,7 @@
 
 A mini game developed in Flutter and Dart.
 The game has animations, score counter, start screen, hints, pause screen, gestures, etc.
-Game Recording is also provided.
+Game Recording is also provided.(screen-20220119-154027_2.mp4)
 Apk also added so you can try and play✌️
 Secret: You cannot beat the enemy! it's coded like that!🤫🤭
 

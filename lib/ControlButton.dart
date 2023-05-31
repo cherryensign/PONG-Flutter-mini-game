@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:holding_gesture/holding_gesture.dart';
 
 class CButton extends StatelessWidget {
   final leftmove;

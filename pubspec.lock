@@ -7,14 +7,14 @@ packages:
       name: archive
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.1.6"
+    version: "2.0.13"
   args:
     dependency: transitive
     description:
       name: args
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.3.0"
+    version: "1.6.0"
   async:
     dependency: transitive
     description:
@@ -64,13 +64,20 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.15.0"
+  convert:
+    dependency: transitive
+    description:
+      name: convert
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.1.1"
   crypto:
     dependency: transitive
     description:
       name: crypto
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.0.1"
+    version: "2.1.5"
   cupertino_icons:
     dependency: "direct main"
     description:
@@ -96,7 +103,7 @@ packages:
       name: flutter_launcher_icons
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.9.2"
+    version: "0.8.1"
   flutter_lints:
     dependency: "direct dev"
     description:
@@ -109,13 +116,20 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  holding_gesture:
+    dependency: "direct main"
+    description:
+      name: holding_gesture
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.1.0"
   image:
     dependency: transitive
     description:
       name: image
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.1.0"
+    version: "2.1.19"
   lints:
     dependency: transitive
     description:
@@ -150,7 +164,7 @@ packages:
       name: petitparser
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "4.4.0"
+    version: "3.1.0"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -218,13 +232,14 @@ packages:
       name: xml
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "5.3.1"
+    version: "4.5.1"
   yaml:
     dependency: transitive
     description:
       name: yaml
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.1.0"
+    version: "2.2.1"
 sdks:
   dart: ">=2.15.0 <3.0.0"
+  flutter: ">=2.0.0"

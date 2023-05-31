@@ -7,7 +7,6 @@ import 'pausemenu.dart';
 import 'brick.dart';
 import 'ball.dart';
 import 'coverscreen.dart';
-import 'ControlButton.dart';
 import 'mainmenu.dart';
 
 class HomePage extends StatefulWidget {
@@ -18,6 +17,7 @@ class HomePage extends StatefulWidget {
 enum direction { UP, DOWN, LEFT, RIGHT }
 
 class _HomePageState extends State<HomePage> {
+  double screenWidth = 0.0;
   //player variables (bottom brick)
   double playerX = -0.2;
   double brickWidth = 0.4;
@@ -154,22 +154,6 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-  void moveLeft() {
-    setState(() {
-      if (!(playerX <= -1)) {
-        playerX -= 0.05;
-      }
-    });
-  }
-
-  void moveRight() {
-    setState(() {
-      if (!(playerX + brickWidth >= 1)) {
-        playerX += 0.05;
-      }
-    });
-  }
-
 //exit main menu and enters game screen
   void exitmenu() {
     setState(() {
@@ -219,17 +203,20 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    screenWidth = MediaQuery.of(context).size.width;
     return gamenotstart
         ? MenuM(exitmenu)
-        : RawKeyboardListener(
-            focusNode: FocusNode(),
-            autofocus: true,
-            onKey: (event) {
-              if (event.isKeyPressed(LogicalKeyboardKey.arrowLeft)) {
-                moveLeft();
-              } else if (event.isKeyPressed(LogicalKeyboardKey.arrowRight)) {
-                moveRight();
-              }
+        : GestureDetector(
+            onHorizontalDragUpdate: (DragUpdateDetails details) {
+              setState(() {
+                playerX += details.delta.dx / screenWidth;
+                if (playerX <= -1.0) {
+                  playerX = -1.0;
+                }
+                if (playerX + brickWidth >= 1.0) {
+                  playerX = 1.0 - brickWidth;
+                }
+              });
             },
             child: Scaffold(
               backgroundColor: Colors.grey[900],
@@ -312,12 +299,15 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                         ])
-                      : Stack(children: [
-                          CButton(
-                              leftmove: moveLeft,
-                              rightmove: moveRight,
-                              pauseopen: openpausemenu),
-                        ]),
+                      : Container(
+                          alignment: Alignment(0, 0.95),
+                          child: IconButton(
+                            onPressed: openpausemenu,
+                            icon: Icon(Icons.pause_circle_filled,
+                                color: Colors.white),
+                            iconSize: 50,
+                          ),
+                        ),
                 ]),
               ),
             ),

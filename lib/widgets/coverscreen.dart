@@ -9,10 +9,10 @@ class CoverScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      alignment: Alignment(0, 0),
+      alignment: const Alignment(0, 0),
       child: Text(
         gameHasStarted ? '' : "Points: " + pointsc.toString(),
-        style: TextStyle(color: Colors.grey, fontSize: 40),
+        style: const TextStyle(color: Colors.grey, fontSize: 40),
       ),
     );
   }

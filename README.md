@@ -6,10 +6,6 @@ Game Recording is also provided.(screen-20220119-154027_2.mp4)
 Apk also added so you can try and play✌️
 Secret: You cannot beat the enemy! it's coded like that!🤫🤭
 
-![Image alt text](https://github.com/cherryensign/PONG-Flutter-mini-game/blob/main/Screenshot_20220120-105208_PONG.png?raw=true)![Image alt text](https://github.com/cherryensign/PONG-Flutter-mini-game/blob/main/Screenshot_20220120-105208_PONG.png?raw=true)![Image alt text](https://github.com/cherryensign/PONG-Flutter-mini-game/blob/main/Screenshot_20220120-105208_PONG.png?raw=true)
-
-
-
 It's actually based on a pong game project developed by Mitch Koko on which he provided a tutorial on his youtube channel. I have took this project futher ahead by adding more components like start,hint, pause screen, etc.
 Special Credits: Link to his project tutorial on Youtube👇
 https://www.youtube.com/watch?v=ScxmOdY0MoE

@@ -6,7 +6,7 @@ Game Recording is also provided.(screen-20220119-154027_2.mp4)
 Apk also added so you can try and play✌️
 Secret: You cannot beat the enemy! it's coded like that!🤫🤭
 
-![Image alt text](https://github.com/cherryensign/PONG-Flutter-mini-game/blob/main/Screenshot_20220120-105208_PONG.png?raw=true)
+![Image alt text](https://github.com/cherryensign/PONG-Flutter-mini-game/blob/main/Screenshot_20220120-105208_PONG.png?raw=true)![Image alt text](https://github.com/cherryensign/PONG-Flutter-mini-game/blob/main/Screenshot_20220120-105208_PONG.png?raw=true)![Image alt text](https://github.com/cherryensign/PONG-Flutter-mini-game/blob/main/Screenshot_20220120-105208_PONG.png?raw=true)
 
 
 

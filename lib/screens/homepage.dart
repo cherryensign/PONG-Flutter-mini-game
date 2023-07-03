@@ -1,3 +1,4 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:ponggame/widgets/tutorial.dart';
 import 'dart:async';
@@ -18,6 +19,8 @@ class HomePage extends StatefulWidget {
 enum direction { UP, DOWN, LEFT, RIGHT }
 
 class _HomePageState extends State<HomePage> {
+  late AudioCache cache;
+  late AudioPlayer player;
   double screenWidth = 0.0;
   double playerX = -0.2;
   double brickWidth = 0.4;
@@ -29,11 +32,42 @@ class _HomePageState extends State<HomePage> {
   var ballYDirection = direction.DOWN;
   var ballXDirection = direction.LEFT;
 
+  bool musicPlaying = false;
   bool gamenotstart = true;
   bool gameHasStarted = false;
   bool pausemenuisopen = false;
 
   var points = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    cache = AudioCache();
+    player = AudioPlayer();
+    loadMusic();
+  }
+
+  void loadMusic() async {
+    await cache.load('music.mp3');
+    player = await cache.loop('music.mp3', volume: 0.05);
+    setState(() {
+      musicPlaying = true;
+    });
+  }
+
+  void playpauseMusic() {
+    if (musicPlaying) {
+      player.pause();
+      setState(() {
+        musicPlaying = false;
+      });
+    } else {
+      player.resume();
+      setState(() {
+        musicPlaying = true;
+      });
+    }
+  }
 
   void startGame() {
     gameHasStarted = true;
@@ -179,10 +213,17 @@ class _HomePageState extends State<HomePage> {
   }
 
   @override
+  void dispose() {
+    player.dispose();
+    cache.clearAll();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     screenWidth = MediaQuery.of(context).size.width;
     return gamenotstart
-        ? MenuM(exitmenu)
+        ? MenuM(exitmenu, playpauseMusic, musicPlaying)
         : GestureDetector(
             onHorizontalDragUpdate: (DragUpdateDetails details) {
               setState(() {
